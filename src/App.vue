@@ -1,31 +1,29 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="container-fluid">
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  --main: #0d014d;
 }
-#nav {
-  padding: 30px;
+.color {
+  color: var(--main)
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.bg {
+  background: var(--main)
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.action {
+  cursor: pointer;
+}
+.no-events {
+  pointer-events: none;
+}
+.ts-white {
+  text-shadow: 10px 2px white, -10px -2px white;
+}
+.w-fc {
+  width: fit-content;
 }
 </style>

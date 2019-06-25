@@ -19,3 +19,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Custom files
+src/utils/firebase-config.js
+src/utils/keys.js
