@@ -15,7 +15,7 @@
                 <div class="col-12 justify-content-around d-flex my-2 mb-4">
                     <h4 @click="setTab(i)" :class="i == activeTab ? 'active-tab no-events' : 'action'" class="tab-bottom text-center" v-for="({title}, i) in tabs">{{title}}</h4>
                 </div>
-                <map-generator @startUp="setTab" class="w-100" v-if="toggleMapGen" :location="location.replace(/\s+/g, '+')" />
+                <map-generator @startUp="setTab" class="w-100" v-if="toggleMapGen && location" :location="location.replace(/\s+/g, '+')" />
             </div>
         </div>
     </div>
