@@ -2,15 +2,23 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { toast, confirm } from '../utils/swal-config.js'
 import auth from './modules/auth.js'
+import courses from './modules/courses.js'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    auth
+    auth,
+    courses
   },
-  state: { },
-  mutations: {  },
+  state: {
+    destination: {},
+    course: {},
+    courses: []
+  },
+  mutations: {
+    ...courses.mutations
+  },
   actions: {
     toast(_, payload) {
       toast(payload.title, payload.text, payload.type, payload.timer)

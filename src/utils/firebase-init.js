@@ -4,7 +4,7 @@ import '@firebase/auth'
 import config from './firebase-config.js'
 
 const firebaseApp = firebase.initializeApp(config)
-const firestore = firebaseApp.firestore()
+const db = firebaseApp.firestore()
 const auth = firebaseApp.auth()
 
-export { firestore, auth }
+export { db, auth }

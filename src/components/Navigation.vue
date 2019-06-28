@@ -180,7 +180,7 @@ export default {
    border-radius: 50%;
 }
 .side-nav-btn {
-    position: fixed;
+    position: absolute;
     right: 1vw;
     top: 1.5vh;
     z-index: 2;

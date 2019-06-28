@@ -12,7 +12,8 @@ auth.onAuthStateChanged(user => {
     router,
     store,
     created() {
-      this.$store.dispatch('auth/setUser', user)
+      store.dispatch('auth/setUser', user)
+      store.dispatch('getCourses')
     },
     render: function (h) { return h(App) }
   }).$mount('#app')
